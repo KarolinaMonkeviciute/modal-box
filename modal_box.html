@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup modal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <button class="c-me">Click Here!</button>
+        <span class="overlay"></span>
+
+     <div class="modal-box">
+            <span class="material-symbols-outlined">verified</span>
+            <h2>Success!</h2>
+            <h3>The button works as expected!</h3>
+            <div class="buttons">
+                <button class="okbtn">OK</button>
+                <button class="closebtn">Close</button>
+             </div>
+     </div>
+    </section>
+        <script>
+            const section = document.querySelector('section'),
+            overlay = document.querySelector('.overlay'),
+            cMe = document.querySelector('.c-me'),
+            closebtn = document.querySelector('.closebtn'),
+            okbtn = document.querySelector('.okbtn');
+
+            cMe.addEventListener('click', () => section.classList.add('active'));
+            overlay.addEventListener('click', () => section.classList.remove('active'));
+            closebtn.addEventListener('click', () => section.classList.remove('active'));
+            okbtn.addEventListener('click', () => section.classList.remove('active'));
+        </script>
+</body>
+</html>
